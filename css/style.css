@@ -1,0 +1,147 @@
+body {
+  font-family: 'Quicksand', sans-serif;
+  background-color: #1D1B27;
+  color: white;
+  padding-top: 4rem;
+}
+
+.navbar {
+  background-color: #2A2438;
+  /* position: fixed; */
+}
+
+.hover\:text-bright-purple:hover {
+    color: #E0AAFF;
+  }
+
+#menu {
+  color: #9c9c9c;
+}
+
+.pfp-image {
+  width: 24rem;
+}
+
+.profile {
+  text-align: center;
+}
+
+.profile h1 {
+  font-size: 3rem; /* 48px */
+  line-height: 1;
+}
+
+.profile p {
+  font-size: 1.5rem; /* 24px */
+  line-height: 2rem; /* 32px */
+}
+
+.about {
+  background-color: #2C2C2E;
+  /* height: 33rem; */
+}
+
+.navbar {
+  background-color: #2A2438;
+  position: fixed; /* Menjadikan navbar tetap di atas */
+  top: 0; /* Menempel di bagian atas layar */
+  left: 0; /* Menempel di sisi kiri layar */
+  width: 100%; /* Lebar navbar mengisi seluruh lebar layar */
+  z-index: 10; /* Memberikan prioritas lebih tinggi untuk navbar */
+  padding: 1rem; /* Memberikan padding untuk ruang di sekitar navbar */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Menambah bayangan */
+}
+
+
+.skill-col {
+  display: grid; /* Gunakan grid untuk tata letak */
+  grid-template-columns: repeat(4, 1fr); /* Default 4 kolom */
+  gap: 1.5rem; /* Jarak antar elemen */
+  justify-content: center;
+  align-items: center;
+}
+
+.skill-box {
+  background-color: black;
+  border-radius: 0.5rem; /* 8px */
+  transition: transform 0.23s ease-in-out, box-shadow 0.23s ease-in-out;
+  width: 100%; /* Menggunakan lebar penuh pada kolom */
+  height: 0;
+  padding-bottom: 100%; /* Membuat kotak tetap persegi dengan rasio 1:1 */
+  position: relative; /* Untuk posisi konten di dalam kotak */
+}
+
+.skill-inner {
+  display: flex;
+  flex-direction: column; /* Atur elemen dalam kolom (gambar di atas teks) */
+  align-items: center; /* Pusatkan gambar secara horizontal */
+  justify-content: center; /* Pusatkan konten secara vertikal */
+  padding-top: 0.5rem; /* 8px */
+  padding-bottom: 0.5rem; /* 8px */
+  position: absolute; /* Posisi gambar dan teks secara absolute di dalam kotak */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  text-align: center;
+}
+
+.skill-inner h2 {
+  font-size: 1.5rem; /* 24px */
+  line-height: 2rem; /* 32px */
+}
+
+.skill-inner img {
+  width: 5rem; /* Lebar gambar */
+  height: auto;
+}
+
+.skill-box:hover {
+  transform: scale(1.045);
+  box-shadow: 0 0 15px 5px rgba(255, 255, 255, 0.6);
+}
+
+/* @media screen and (max-width: 768px) {
+  
+} */
+
+
+
+@media screen and (max-width: 768px) {
+  body {
+    padding-top: 2rem;
+  }
+  
+  .pfp-image {
+    width: 15rem
+  }
+
+  .profile h1 {
+    font-size: 1.875rem; /* 30px */
+    line-height: 2.25rem; /* 36px */
+  }
+
+  .profile p {
+    font-size: 1.125rem; /* 18px */
+    line-height: 1.75rem; /* 28px */
+  }
+  
+  .skill-col {
+    grid-template-columns: repeat(2, 1fr); /* Menjadi 2 kolom pada layar kecil */
+    gap: 2rem; /* Menambah jarak antar elemen */
+  }
+
+  .skill-box {
+    width: 130px; /* Lebar kotak 95% dari kolom */
+    padding-bottom: 95%; /* Menjaga aspek rasio kotak tetap sama */
+  }
+
+  .skill-inner h2 {
+    font-size: 1.125rem; /* 18px */
+    line-height: 1.75rem; /* 28px */
+  }
+
+  .skill-inner img {
+    width: 6rem; /* Perbesar gambar */
+  }
+}
