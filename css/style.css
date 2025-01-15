@@ -125,6 +125,16 @@ body {
 } */
 
 
+.footer {
+  background-color: black;
+  padding-top: 35px;
+  padding-bottom: 35px;
+}
+
+.footer-container {
+  
+} 
+
 
 @media screen and (max-width: 768px) {
   body {
