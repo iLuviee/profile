@@ -124,6 +124,17 @@ body {
   
 } */
 
+.project-container {
+  text-align: center;
+  justify-contemt: center;
+}
+
+
+.project-box {
+  background-color: #312e42;
+  color: #f0f0f0;
+}
+
 
 .footer {
   background-color: black;
