@@ -158,6 +158,26 @@ body {
   
 }
 
+/* .form-contact-container {
+  margin-left: -20px;
+  margin-right: -20px;
+}
+ */
+.contact-form-input {
+  background-color: #28272b;
+  border-radius: 5px;
+  font-size: 20px;
+}
+
+.submit-button-form-contact {
+  border-radius: 5px;
+  width: 10vw;
+  height: 5vh;
+}
+
+.submit-button-form-contact:hover {
+  background-color: #28272b;
+}
 
 .footer {
   background-color: black;
