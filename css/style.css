@@ -123,16 +123,39 @@ body {
 /* @media screen and (max-width: 768px) {
   
 } */
+.project {
+  background-color: #2C2C2E;
+}
 
 .project-container {
   text-align: center;
   justify-contemt: center;
 }
 
+.project-box:hover {
+  transform: scale(1.035);
+  /* box-shadow: 0 0 15px 5px rgba(255, 255, 255, 0.6); */
+}
+
 
 .project-box {
   background-color: #312e42;
   color: #f0f0f0;
+  transition: transform 0.27s ease-in-out, box-shadow 0.27s ease-in-out;
+}
+
+.project-box img {
+  border-radius: 10px;
+}
+
+.contact-icon-inner {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.icon-contact-redirect {
+  
 }
 
 
@@ -188,5 +211,8 @@ body {
   
   .skill-inner img {
     width: 6vw;
+  }
+  .contact-icon-inner {
+    transform: scale(0.8);
   }
 }
