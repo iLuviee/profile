@@ -137,6 +137,13 @@ body {
   /* box-shadow: 0 0 15px 5px rgba(255, 255, 255, 0.6); */
 }
 
+.webosisbutton {
+  background-color: #260f2e;
+  padding: 5px;
+  margin-top: 2px;
+  border-radius: 10px;
+}
+
 
 .project-box {
   background-color: #312e42;
