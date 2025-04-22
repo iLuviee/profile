@@ -25,6 +25,33 @@ body {
 
 .pfp-image {
   width: 24rem;
+  animation: welcome-animation-pfp 0.75s ease-out;
+}
+
+.short-self-desc {
+  animation: welcome-animation-short-desc 0.75s ease-out;
+}
+
+@keyframes welcome-animation-pfp {
+  from {
+    opacity: 0;
+    transform: translateX(-200px)
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0)
+  }
+}
+
+@keyframes welcome-animation-short-desc {
+  from {
+    opacity: 0;
+    transform: translateX(200px)
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0)
+  }
 }
 
 .profile {
@@ -58,22 +85,22 @@ body {
 }
 
 
-.skill-col {
-  display: grid; /* Gunakan grid untuk tata letak */
-  grid-template-columns: repeat(4, 1fr); /* Default 4 kolom */
-  gap: 1.5rem; /* Jarak antar elemen */
+/* .skill-col {
+  display: grid; 
+  grid-template-columns: repeat(4, 1fr); 
+  gap: 1.5rem; 
   justify-content: center;
   align-items: center;
-}
+} */
 
 .skill-box {
   background-color: black;
   border-radius: 0.5rem; /* 8px */
   transition: transform 0.27s ease-in-out, box-shadow 0.27s ease-in-out;
-  width: 100%; /* Menggunakan lebar penuh pada kolom */
+  /* width: 100%;  */
   height: 0;
   padding-bottom: 100%; /* Membuat kotak tetap persegi dengan rasio 1:1 */
-  position: relative; /* Untuk posisi konten di dalam kotak */
+  position: relative; 
 }
 
 .skill-inner {
@@ -188,8 +215,8 @@ body {
 
 .footer {
   background-color: black;
-  padding-top: 35px;
-  padding-bottom: 35px;
+  padding-top: 1px;
+  padding-bottom: 25px;
 }
 
 .footer-container {
@@ -197,9 +224,32 @@ body {
 } 
 
 
+@media screen and (min-width: 770px) {
+  .autoshow-animation {
+    animation: autoshow-scroll both;
+    animation-timeline: view(75% 10%);
+  }
+
+  @keyframes autoshow-scroll {
+    from {
+      opacity: 0;
+      transform: translateY(200px) scale(0.3);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+  }
+}
+
+
 @media screen and (max-width: 768px) {
   body {
     padding-top: 2rem;
+  }
+
+  .phone-none {
+    display: none;
   }
   
   .pfp-image {
@@ -216,14 +266,17 @@ body {
     line-height: 1.75rem; /* 28px */
   }
   
-  .skill-col {
-    grid-template-columns: repeat(2, 1fr); /* Menjadi 2 kolom pada layar kecil */
-    gap: 2rem; /* Menambah jarak antar elemen */
-  }
+  /* .skill-col {
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 2rem; 
+  } */
 
   .skill-box {
-    width: 130px; /* Lebar kotak 95% dari kolom */
-    padding-bottom: 95%; /* Menjaga aspek rasio kotak tetap sama */
+    height: auto;
+    width: 30vw;
+    gap: 4rem;
+    /* width: 130px;  */
+    /* padding-bottom: 95%;  */
   }
 
   .skill-inner h2 {
