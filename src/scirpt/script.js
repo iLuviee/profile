@@ -15,3 +15,12 @@
 
 //   particleBackground.appendChild(particle);
 // }
+
+let profilecontainer = document.getElementById("profile-container-overall")
+// let selfshortdesc = document.getElementById("short-self-desc")
+
+window.addEventListener('scroll', () => {
+  let value = window.scrollY;
+
+  profilecontainer.style.marginTop = value * 2.5 + 'px';
+});
